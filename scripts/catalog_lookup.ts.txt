@@ -1,0 +1,26 @@
+
+
+export function getCatalogDevotional(date: Date = new Date()) {
+  const yearStart = Date.UTC(date.getUTCFullYear(), 0, 1);
+  const current = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+  const dayOfYear = Math.floor((current - yearStart) / 86400000) + 1;
+  const entry = devotionalCatalog.find(item => Number(item.day) === dayOfYear);
+  if (!entry) return null;
+  return {
+    id: -dayOfYear,
+    churchId: 0,
+    authorUserId: 0,
+    dateKey: date.toISOString().slice(0, 10),
+    title: entry.title,
+    bibleReference: entry.bibleReference,
+    reflection: entry.reflection,
+    application: entry.application,
+    prayer: entry.prayer,
+    question: entry.question,
+    status: "published" as const,
+    publishedAt: date,
+    createdAt: date,
+    updatedAt: date,
+    source: "catalog" as const,
+  };
+}

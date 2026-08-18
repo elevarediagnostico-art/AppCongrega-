@@ -1,0 +1,478 @@
+[
+  {
+    "day": "64",
+    "error": "reflection too short for day 64"
+  },
+  {
+    "day": "119",
+    "error": "reflection too short for day 119"
+  },
+  {
+    "day": "256",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "257",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "258",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "259",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "260",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "261",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "262",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "263",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "264",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "265",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "266",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "267",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "268",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "269",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "270",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "271",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "272",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "273",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "274",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "275",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "276",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "277",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "278",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "279",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "280",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "281",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "282",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "283",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "284",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "285",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "286",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "287",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "288",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "289",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "290",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "291",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "292",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "293",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "294",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "295",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "296",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "297",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "298",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "299",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "300",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "301",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "302",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "303",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "304",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "305",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "306",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "307",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "308",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "309",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "310",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "311",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "312",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "313",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "314",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "315",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "316",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "317",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "318",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "319",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "320",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "321",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "322",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "323",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "324",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "325",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "326",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "327",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "328",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "329",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "330",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "331",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "332",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "333",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "334",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "335",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "336",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "337",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "338",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "339",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "340",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "341",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "342",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "343",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "344",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "345",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "346",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "347",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "249",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "349",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "348",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "350",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "351",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "353",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "352",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "354",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "355",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "356",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "357",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "358",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "359",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "361",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "360",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "363",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "362",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "364",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "365",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "250",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "254",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "252",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "253",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "255",
+    "error": "'NoneType' object is not subscriptable"
+  },
+  {
+    "day": "251",
+    "error": "'NoneType' object is not subscriptable"
+  }
+]

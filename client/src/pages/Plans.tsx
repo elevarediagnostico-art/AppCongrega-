@@ -1,0 +1,12 @@
+import { Link } from "wouter";
+import { Check, Sparkles } from "lucide-react";
+
+const plans = [
+  { name: "Nossos planos", members: "Até 100 membros", price: "R$ 97", accent: "border-stone-200 bg-white" },
+  { name: "Comunidade", members: "Até 500 membros", price: "R$ 147", accent: "border-[#bcd4c8] bg-[#edf5f0]" },
+  { name: "Igreja", members: "500+ membros", price: "R$ 217", accent: "border-[#123d36] bg-[#123d36] text-[#f8f1df]" },
+];
+
+export default function Plans() {
+  return <main className="min-h-screen bg-[#f7f5f0] px-4 py-10 text-stone-800 md:py-16"><div className="mx-auto max-w-5xl"><Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-[#387266]">← Voltar à Jornada</Link><section className="mx-auto mt-12 max-w-2xl text-center"><span className="mx-auto grid size-12 place-items-center rounded-2xl bg-[#123d36] text-[#e8bd68]"><Sparkles className="size-5" /></span><p className="eyebrow mt-5">Igreja Jornada</p><h1 className="heading-display mt-2">Simples por princípio.</h1><p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-stone-600">Escolha a faixa adequada ao tamanho da sua comunidade. A experiência e os recursos são sempre completos.</p></section><section className="mt-10 grid gap-4 md:grid-cols-3">{plans.map(plan => <article key={plan.name} className={`rounded-3xl border p-6 shadow-[0_8px_30px_rgb(68,58,42,0.06)] ${plan.accent}`}><p className="text-xs font-semibold uppercase tracking-[0.16em] opacity-70">{plan.members}</p><h2 className="mt-4 font-serif text-3xl font-semibold">{plan.name}</h2><p className="mt-6 font-serif text-4xl font-semibold">{plan.price}<span className="ml-1 text-sm font-sans font-medium opacity-70">/mês</span></p><div className="mt-8 border-t border-current/10 pt-5 text-sm leading-6 opacity-80"><p className="flex items-start gap-2"><Check className="mt-1 size-4 shrink-0" />Todos os recursos da plataforma.</p><p className="mt-3 flex items-start gap-2"><Check className="mt-1 size-4 shrink-0" />Dados isolados para cada igreja.</p><p className="mt-3 flex items-start gap-2"><Check className="mt-1 size-4 shrink-0" />Galeria com imagens otimizadas.</p></div></article>)}</section><p className="mx-auto mt-8 max-w-3xl rounded-2xl border border-[#cfe0d7] bg-[#edf5f0] px-5 py-4 text-center text-sm leading-6 text-[#417468]">Todos os planos possuem acesso a todos os recursos da plataforma. O valor varia apenas conforme o número de membros cadastrados.</p></div></main>;
+}

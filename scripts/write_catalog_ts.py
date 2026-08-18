@@ -1,0 +1,8 @@
+import json
+from pathlib import Path
+entries = json.loads(Path('/home/ubuntu/igreja-jornada/content/annual-devotionals.json').read_text(encoding='utf-8'))
+fields = ['day','month','monthName','theme','title','bibleReference','reflection','application','prayer','question']
+body = json.dumps([{k: item[k] for k in fields} for item in entries], ensure_ascii=False, indent=2)
+text = f'''export type DevotionalCatalogEntry = {{ day: string; month: number; monthName: string; theme: string; title: string; bibleReference: string; reflection: string; application: string; prayer: string; question: string; }};\n\nexport const devotionalCatalog: DevotionalCatalogEntry[] = {body};\n\nexport function getCatalogDevotional(date: Date = new Date()) {{\n  const yearStart = Date.UTC(date.getUTCFullYear(), 0, 1);\n  const current = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());\n  const dayOfYear = Math.floor((current - yearStart) / 86400000) + 1;\n  const entry = devotionalCatalog.find(item => Number(item.day) === dayOfYear);\n  if (!entry) return null;\n  return {{\n    id: -dayOfYear, churchId: 0, authorUserId: 0, dateKey: date.toISOString().slice(0, 10),\n    title: entry.title, bibleReference: entry.bibleReference, reflection: entry.reflection,\n    application: entry.application, prayer: entry.prayer, question: entry.question, status: "published" as const,\n    publishedAt: date, createdAt: date, updatedAt: date, source: "catalog" as const,\n  }};\n}}\n'''
+Path('/home/ubuntu/igreja-jornada/server/devotionalCatalog.ts').write_text(text, encoding='utf-8')
+print(f'wrote {len(entries)} entries')

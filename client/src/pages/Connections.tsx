@@ -1,0 +1,19 @@
+import { MemberPage } from "@/components/MemberPage";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useActiveChurch } from "@/hooks/useActiveChurch";
+import { trpc } from "@/lib/trpc";
+import { MapPin, ShieldCheck, Store } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
+
+export default function Connections() {
+  const { church } = useActiveChurch(); const listings = trpc.connections.list.useQuery({ churchId: church?.id ?? 0 }, { enabled: !!church }); const utils = trpc.useUtils();
+  const [form, setForm] = useState({ title: "", category: "", description: "", city: "", whatsapp: "" });
+  const submit = trpc.connections.submit.useMutation({ onSuccess: () => { toast.success("Envio recebido para moderação."); setForm({ title: "", category: "", description: "", city: "", whatsapp: "" }); utils.connections.list.invalidate(); }, onError: error => toast.error(error.message) });
+  const update = (key: keyof typeof form, value: string) => setForm(current => ({ ...current, [key]: value }));
+  return <MemberPage><section className="mb-8"><p className="eyebrow">Conexões</p><h1 className="heading-display">Talentos da comunidade</h1><p className="mt-2 max-w-xl text-stone-600">Conheça profissionais e negócios da igreja. A contratação acontece diretamente entre as partes.</p></section>
+  <div className="grid gap-4 md:grid-cols-2">{listings.data?.map(item => <article key={item.id} className="rounded-2xl border border-stone-200 bg-white p-5 shadow-[0_8px_30px_rgb(68,58,42,0.06)]"><div className="flex items-start justify-between"><span className="grid size-10 place-items-center rounded-xl bg-[#e4f0e9] text-[#216154]"><Store className="size-5" /></span><span className="rounded-full bg-stone-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-stone-500">{item.category}</span></div><h2 className="mt-5 font-serif text-xl font-semibold">{item.title}</h2>{item.businessName && <p className="mt-1 text-sm font-medium text-[#387266]">{item.businessName}</p>}<p className="mt-3 text-sm leading-6 text-stone-600">{item.description}</p>{item.city && <p className="mt-4 flex items-center gap-1.5 text-xs text-stone-500"><MapPin className="size-3.5" />{item.city}</p>}</article>)}</div>
+  <section className="mt-10 rounded-3xl border border-[#cfe0d7] bg-[#edf5f0] p-5 md:p-7"><div className="mb-5 flex gap-3"><ShieldCheck className="mt-0.5 size-5 text-[#216154]" /><div><h2 className="font-serif text-xl font-semibold">Apresente o seu trabalho</h2><p className="mt-1 text-sm text-stone-600">As publicações seguem as regras da comunidade e passam por moderação.</p></div></div><div className="grid gap-3 sm:grid-cols-2"><Input value={form.title} onChange={event => update("title", event.target.value)} placeholder="Profissão ou serviço" /><Input value={form.category} onChange={event => update("category", event.target.value)} placeholder="Categoria" /><Input value={form.city} onChange={event => update("city", event.target.value)} placeholder="Cidade" /><Input value={form.whatsapp} onChange={event => update("whatsapp", event.target.value)} placeholder="WhatsApp" /></div><Textarea value={form.description} onChange={event => update("description", event.target.value)} placeholder="Descreva o seu trabalho" className="mt-3 min-h-28 bg-white" /><Button className="mt-4 bg-[#123d36] hover:bg-[#185047]" disabled={!church || form.title.length < 3 || form.description.length < 10 || submit.isPending} onClick={() => church && submit.mutate({ churchId: church.id, ...form })}>Enviar para análise</Button><p className="mt-3 text-xs leading-5 text-stone-500">A publicação apresenta um profissional ou negócio da comunidade. A contratação é realizada diretamente entre as partes.</p></section></MemberPage>;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Igreja Jornada",
+  "short_name": "Jornada",
+  "description": "Comunidade, jornada bíblica, participação e cuidado para igrejas locais.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f5f0",
+  "theme_color": "#123d36",
+  "lang": "pt-BR"
+}

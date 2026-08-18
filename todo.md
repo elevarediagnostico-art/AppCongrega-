@@ -1,0 +1,93 @@
+# Project TODO
+
+- [x] Definir a taxonomia de papéis RBAC: Super Admin, Administrador da Igreja, Líder/Pastor, Professor EBD, Editor de Galeria e Membro.
+- [x] Modelar as entidades principais e os relacionamentos da plataforma no esquema de dados.
+- [x] Criar e aplicar as migrações de base de dados sem dados simulados de métricas.
+- [x] Confirmar as tabelas de conteúdos, Revista EBD, Conexões e famílias após a segunda migração.
+- [x] Executar consultas direcionadas para validar as relações do novo esquema antes do checkpoint.
+- [x] Proteger as operações de backend com autenticação e autorização por papel.
+- [x] Construir a estrutura de navegação responsiva, com experiência mobile-first para membros e área administrativa isolada.
+- [x] Implementar a Home do membro com leitura atual, Pão Diário, sequência e atividades da semana.
+- [ ] Implementar Plano Bíblico de 365 dias, registo de leitura, progresso e sequência.
+- [ ] Implementar Pão Diário administrável e visível ao membro.
+- [ ] Implementar Marcos configuráveis e desbloqueamento automático por atividade.
+- [x] Implementar gestão de classes, aulas, professores e matrículas de EBD.
+- [x] Implementar geração e validação de check-in por QR Code com prevenção de duplicidade.
+- [ ] Implementar consulta individual e administrativa de frequência EBD.
+- [x] Implementar agenda e eventos com confirmação de participação quando aplicável.
+- [x] Implementar avisos publicados pela administração e leitura pelo membro.
+- [x] Implementar galeria com álbuns, metadados, permissões e armazenamento de imagens em S3.
+- [x] Implementar download de fotos para membros, sujeito à configuração do álbum.
+- [x] Implementar pedidos de oração com visibilidade, estado e acesso restrito à liderança autorizada.
+- [x] Implementar métricas administrativas derivadas de dados persistidos.
+- [x] Implementar sinais objetivos de atenção pastoral restritos à liderança autorizada.
+- [x] Implementar painel administrativo com gestão de conteúdos, pessoas e operações da igreja.
+- [ ] Preparar preferências e registo de notificações sem temporizadores em processo.
+- [x] Implementar Palavra da Igreja com textos autorais, devocionais, reflexões, estudos, mensagens e segmentação de público.
+- [ ] Implementar os modos Pão Diário, Palavra da Igreja e Híbrido configuráveis pela administração.
+- [x] Unificar eventos e conteúdos agendados no Calendário da Igreja.
+- [x] Implementar CMS da Igreja com publicação imediata ou agendada, imagem, tipo de conteúdo e público-alvo.
+- [ ] Implementar Revista EBD trimestral e materiais autorizados associados a classe e lição.
+- [x] Implementar a área Conexões para profissionais, negócios, serviços e produtos da comunidade.
+- [ ] Implementar moderação, regras de publicação e aviso de responsabilidade para Conexões.
+- [x] Preparar a estrutura de famílias para evolução futura, sem criar competição de engajamento.
+- [x] Simplificar o RBAC para os papéis congelados: Membro, Pastor e Administrador.
+- [x] Implementar infraestrutura partilhada com isolamento obrigatório de dados por igreja em cada operação de backend.
+- [x] Separar o painel do Pastor, voltado a métricas, participação, frequência, leitura, oração e atenção pastoral.
+- [x] Restringir o painel do Administrador a operações, conteúdo, agenda, EBD, galeria, moderação e relatórios.
+- [x] Implementar relatório mensal padronizado com indicadores reais de igreja, Bíblia, EBD, participação, cuidado e atividade.
+- [x] Implementar exportação do relatório mensal em CSV e documentar a futura opção de PDF.
+- [x] Exibir os planos Essencial (até 100 membros, R$ 97), Comunidade (até 500 membros, R$ 147) e Igreja (500+ membros, R$ 217), com todos os recursos em qualquer faixa.
+- [x] Modelar a faixa contratada por igreja apenas para controlo de membros e apresentação comercial, sem bloquear recursos.
+- [x] Validar o limite de tamanho e o tipo de ficheiro antes de enviar fotos para a galeria.
+- [x] Gerar versões otimizadas e miniaturas das imagens da galeria antes de as servir aos membros.
+- [x] Registar metadados de imagem para controlo de armazenamento, entrega e auditoria por igreja.
+- [x] Manter dados operacionais exclusivamente na base relacional, nunca em Google Drive.
+- [x] Tratar fotos, PDFs, revistas EBD e documentos como ficheiros externos, carregados apenas sob demanda.
+- [x] Permitir que materiais EBD autorizados apontem opcionalmente para bibliotecas existentes em Google Drive, sem migração inicial de ficheiros.
+- [x] Documentar a separação Aplicativo → API → Base de Dados/Armazenamento → Google Drive opcional.
+- [x] Configurar manifest e cache mínimo para permitir instalação progressiva da aplicação web no celular.
+- [ ] Criar testes unitários para regras de permissões, progresso, frequência, QR Code e métricas.
+- [x] Criar README.md, DEPLOY.md, ENVIRONMENT.md, ARCHITECTURE.md, DATABASE.md, PERMISSIONS.md e RUNBOOK.md.
+- [ ] Validar fluxos funcionais e responsividade em desktop e mobile.
+- [x] Preparar arquivos, scripts e configuração para execução independente e deploy no Emergent.
+- [ ] Implementar confirmação de participação em eventos no backend e na experiência do membro.
+- [ ] Adicionar listagem e leitura de avisos publicados para o membro.
+- [ ] Manter Profissionais & Negócios separado das áreas de leitura, oração e culto, com moderação administrativa.
+- [x] Documentar o protocolo de etapa: escopo, dados necessários, tabelas afetadas e funcionalidades preservadas antes de cada módulo.
+- [x] Não adicionar funcionalidades, automações, integrações ou perfis que não estejam especificados no projeto.
+- [x] Definir o Índice de Experiência da Igreja a partir de ativação, uso, participação, feedback e compartilhamento espontâneo.
+- [x] Preparar o programa de Embaixadores da Experiência com reconhecimento e benefícios não financeiros.
+- [x] Não implementar pagamento, comissão ou incentivo financeiro por indicação nesta fase.
+- [x] Garantir que métricas e reconhecimento de embaixadores não criem campos, fluxos ou estruturas preparatórias para remuneração futura.
+- [x] Acrescentar sinais reais de feedback e compartilhamento espontâneo ao Índice de Experiência da Igreja.
+- [ ] Adicionar gestão administrativa visível dos reconhecimentos de Embaixadores da Experiência e documentar os benefícios não financeiros.
+- [x] Implementar configuração visual individual por igreja: nome, logo, cores, capa e mensagem de boas-vindas.
+- [x] Aplicar automaticamente a identidade visual da igreja ao membro sem afetar outra comunidade.
+- [x] Permitir que apenas o Administrador atualize a identidade visual da própria igreja.
+- [x] Manter um único ícone técnico PWA e não criar aplicativo, código ou PWA separado por igreja.
+- [x] Documentar o que foi reutilizado, criado, personalizado, isolado e mantido fora do escopo na camada de identidade visual.
+- [x] Validar explicitamente o documento `BRANDING.md` antes do checkpoint.
+- [x] Manter a jornada diária do membro sem pagamentos, funcionalidades financeiras ou gestão administrativa.
+- [x] Remover da navegação do membro qualquer atalho para áreas de gestão administrativa.
+- [x] Separar visualmente a navegação do membro das áreas pastoral e administrativa conforme o papel autorizado.
+- [ ] Criar preview visual da marca EKKLESIA com ícone, assinaturas, versões clara e escura e paleta própria.
+- [ ] Não alterar telas, layout ou identidade implementada no aplicativo antes da aprovação explícita da prévia EKKLESIA.
+- [ ] Retomar a identidade visual EKKLESIA somente se o usuário solicitar explicitamente em uma etapa futura.
+- [ ] Consolidar EBD, agenda, avisos e galeria somente com estruturas existentes, sem pagamentos, módulos financeiros, perfis ou integrações externas.
+- [ ] Consolidar o cuidado pastoral somente com dados existentes, sem diagnóstico, inferência emocional/espiritual/psicológica, IA, chat, automações, pagamentos ou novos perfis.
+- [x] Exibir no painel pastoral contagens factuais de atividade, leituras concluídas, presenças EBD e pedidos de oração autorizados.
+- [ ] Comparar o novo prompt mestre com as decisões já aprovadas, registrando conflitos antes de alterar papéis ou módulos.
+- [ ] Avaliar o contexto curto de novos livros bíblicos sem transformar a jornada em curso ou Bíblia digital.
+- [ ] Avaliar frequência individual, percentual, sequência e histórico de EBD usando dados existentes.
+- [ ] Avaliar notificações por categorias e histórico, sem temporizadores em processo ou automações não aprovadas.
+- [ ] Avaliar os critérios finais de conclusão por Membro, Liderança e Segurança contra os fluxos implementados.
+- [x] Implementar confirmação de participação em eventos no backend e na experiência do membro.
+- [x] Adicionar listagem e leitura de avisos publicados para o membro.
+- [x] Garantir que os sinais pastorais sejam apresentados como evidências objetivas, sem rótulos, diagnósticos ou interpretações automáticas.
+- [ ] Completar e validar a Home do membro com saudação, leitura atual, Pão Diário, sequência e resumo semanal.
+- [ ] Adicionar gestão administrativa de membros e concluir os fluxos visíveis de professores e matrículas EBD.
+- [ ] Permitir imagem opcional no CMS da Igreja e validar a publicação na interface.
+- [ ] Implementar controlo informativo da contagem de membros perante a faixa contratada, sem bloquear recursos.
+- [ ] Cobrir PDFs e documentos externos sob demanda e providenciar um modelo de configuração local equivalente ao `.env.example`.
+- [x] Disponibilizar `LOCAL_SETUP.md` como guia de configuração local sem versionar segredos.
