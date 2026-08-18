@@ -3,21 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { useActiveChurch } from "@/hooks/useActiveChurch";
 import { trpc } from "@/lib/trpc";
-import { startLogin } from "@/const";
 import { useAuth } from "@/_core/hooks/useAuth";
+import Landing from "@/pages/Landing";
 import { ArrowRight, BookOpen, CalendarDays, Check, Flame, HeartHandshake, Sparkles, SunMedium } from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
-
-function Welcome() {
-  return <div className="grid min-h-screen place-items-center bg-[#123d36] p-5"><section className="w-full max-w-md rounded-[2rem] border border-white/10 bg-white/[0.06] p-8 text-center text-[#f8f1df] shadow-2xl backdrop-blur"><span className="mx-auto grid size-14 place-items-center rounded-2xl bg-[#e8bd68] text-[#153a33]"><Sparkles className="size-6" /></span><p className="mt-7 text-xs font-semibold uppercase tracking-[0.2em] text-[#e8bd68]">Igreja Jornada</p><h1 className="mt-3 font-serif text-4xl font-semibold leading-tight">A sua comunidade, todos os dias.</h1><p className="mx-auto mt-4 max-w-sm text-sm leading-6 text-white/65">Palavra, constância, participação e cuidado num único lugar.</p><Button onClick={() => startLogin()} className="mt-7 h-11 w-full bg-[#e8bd68] text-[#153a33] hover:bg-[#f2ce84]">Entrar na Jornada</Button><a href="/landing.html" className="mt-4 block text-sm text-white/70 underline-offset-4 hover:text-white hover:underline">Conhecer o CONGREGA</a></section></div>;
-}
 
 export default function Home() {
   const { user, loading } = useAuth(); const { church, isLoading: churchLoading } = useActiveChurch(); const home = trpc.member.home.useQuery({ churchId: church?.id ?? 0 }, { enabled: !!church }); const utils = trpc.useUtils();
   const complete = trpc.bible.complete.useMutation({ onSuccess: () => { toast.success("Leitura concluída. Que a Palavra continue a acompanhar o seu dia."); utils.member.home.invalidate(); }, onError: error => toast.error(error.message) });
   if (loading) return <div className="grid min-h-screen place-items-center bg-[#f7f5f0] text-sm text-stone-500">A preparar a sua Jornada...</div>;
-  if (!user) return <Welcome />;
+  if (!user) return <Landing />;
   if (churchLoading) return <div className="grid min-h-screen place-items-center bg-[#f7f5f0] text-sm text-stone-500">A ligar à sua igreja...</div>;
   if (!church) return <MemberPage><section className="mx-auto max-w-xl rounded-3xl border border-stone-200 bg-white p-8 text-center"><p className="eyebrow">Bem-vindo à Jornada</p><h1 className="heading-display mt-2">Ainda não pertence a uma igreja</h1><p className="mx-auto mt-3 max-w-md text-sm leading-6 text-stone-600">Peça à liderança da sua igreja para o convidar para a comunidade.</p></section></MemberPage>;
   const data = home.data; const readingPercent = data?.progress.total ? Math.round((data.progress.completed / data.progress.total) * 100) : 0;

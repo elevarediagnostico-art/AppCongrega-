@@ -29,6 +29,9 @@ Multi-tenant: dados isolados por `churchId`; backend valida membership + role (r
 - [x] Supervisor rodando backend(:8001) + vite(:3000) + mariadb.
 - [x] Testado: 27/27 backend (auth, tenancy, RBAC, member journey, management, reports, care); frontend welcome + home autenticado + rotas.
 
+## Done (2026-06, sessão 2)
+- [x] Landing page pública implementada fiel ao design enviado (`client/src/pages/Landing.tsx`): fontes Fraunces+Inter, paleta papel/vinho/ouro, hero com mock de celular, seções Por que/Problema/Pilares/Membro/Pastor/Admin/Privacidade, preços (4 planos), FAQ, CTA final e footer. Substitui a antiga tela "Welcome" para usuários não autenticados (Home.tsx). Todos os CTAs "Experimentar/Entrar" disparam o login Google (startLogin -> auth.emergentagent.com), validado por screenshot.
+
 ## Backlog (próximas features — do mais simples ao mais complexo)
 - P1: Reativar integrações com a chave universal Emergent — AIChatBox (LLM), geração de imagem, transcrição de voz, e storage de upload (galeria/fotos) — hoje ainda apontam para a Forge API da Manus e falham só ao usar.
 - P1: Plano Bíblico 365 dias (catálogo completo) e Pão Diário administrável.
